@@ -5,19 +5,11 @@ from typing import List, NamedTuple, Any
 from abc import ABC as AbstractClass
 
 
-class Successor(NamedTuple):
-    """
-    A search problem successor.
-    """
-    position: Any
-    action: str
-    cost: int
-
-
 class SearchProblem(AbstractClass):
     """
     This class serves as a blueprint for a search problem.
     """
+
     def getStartState(self) -> None:
         """
         This function must return the start state of the search problem.
@@ -42,5 +34,3 @@ class SearchProblem(AbstractClass):
         This method will retrieve the cost of a sequence of actions.
         """
         raise NotImplemented
-
-
